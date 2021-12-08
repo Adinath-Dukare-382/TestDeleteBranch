@@ -8,7 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Delete merged branch 
-        if: github.event.pull_request.head.ref == 'user5' && github.event.pull_request.merged == true
+#         if: github.event.pull_request.head.ref == 'user5' && github.event.pull_request.merged == true
+        if: match(github.event.pull_request.head.ref, "user$", true) == true && github.event.pull_request.merged == true
         uses: koj-co/delete-merged-action@master
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
