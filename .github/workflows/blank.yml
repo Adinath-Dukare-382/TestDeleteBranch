@@ -2,11 +2,12 @@ name: MergePRs
 on:
   pull_request:
     branches: [development]
+    types: [closed]
 jobs:
   automerge:
     runs-on: ubuntu-latest
     steps:
-      - name: Delete merged branch
+      - name: Delete merged branch 
         if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
         uses: koj-co/delete-merged-action@master
         env:
