@@ -1,0 +1,25 @@
+name: Merge PRs
+on: 
+  push:
+    branches:
+      - main
+      
+#   pull_request:
+#     types:
+#       - opened
+#       - closed
+#       - edited
+#       - reopened
+jobs:
+  automerge:
+    runs-on: ubuntu-latest
+    steps:
+#       - name: delete-merged-action
+#         uses: pabio/delete-merged-action@v1.2.4
+#         with:
+#           branches: "!development"
+#         env:
+#           GITHUB_TOKEN: "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"
+      - run: |
+          echo "Hello!"
+          echo "Hii!"
