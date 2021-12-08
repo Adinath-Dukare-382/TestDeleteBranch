@@ -1,8 +1,3 @@
-# name: cibuild
-# on:
-#   push:
-#     branches: [ main ]
-    
 name: Merge PRs
 on:
   pull_request:
