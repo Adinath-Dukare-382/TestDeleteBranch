@@ -1,14 +1,14 @@
 name: MergePRs
 on:
   pull_request:
-    branches: [development]
+    branches: [main]
     types: [closed]
 jobs:
   automerge:
     runs-on: ubuntu-latest
     steps:
       - name: Delete merged branch 
-        if: startsWith(github.event.pull_request.head.ref, 'user') == true && github.event.pull_request.merged == true
+        if: startsWith(github.event.pull_request.head.ref, 'feature_') == true && github.event.pull_request.merged == true
         uses: koj-co/delete-merged-action@master
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
