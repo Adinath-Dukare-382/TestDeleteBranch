@@ -11,8 +11,10 @@ jobs:
       - name: Delete merged branch 
         if: startsWith(github.event.pull_request.head.ref, 'feature') == true && github.event.pull_request.merged == true
         uses: koj-co/delete-merged-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
           
           
