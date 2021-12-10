@@ -1,7 +1,7 @@
 name: MergePRs
 on:
   pull_request:
-    branches: [main]
+    branches: [main,development]
     types: [closed]
 jobs:
   automerge:
@@ -9,16 +9,37 @@ jobs:
     steps:
       - uses: actions/checkout@v2.4.0
       - name: Delete merged branch 
-        if: startsWith(github.event.pull_request.head.ref, 'feature') == true && github.event.pull_request.merged == true
+        if: startsWith(github.event.pull_request.head.ref, 'feature') == true && github.event.pull_request.head.base == 'development' && github.event.pull_request.merged == true
         uses: koj-co/delete-merged-action@master
-#         with:
-#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
+#       - name: Delete merged branch 
+#         if: startsWith(github.event.pull_request.head.ref, 'feature') == true && github.event.pull_request.merged == true
+#         uses: koj-co/delete-merged-action@master
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+# name: MergePRs
+# on:
+#   pull_request:
+#     branches: [main]
+#     types: [closed]
+# jobs:
+#   automerge:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v2.4.0
+#       - name: Delete merged branch 
+#         if: startsWith(github.event.pull_request.head.ref, 'feature') == true && github.event.pull_request.merged == true
+#         uses: koj-co/delete-merged-action@master
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
+         
+         
           
-# 4. only feature branch deleted(compare pr branch)
+# 4. only user branch deleted(compare pr branch)
 # name: MergePRs
 # on:
 #   pull_request:
