@@ -16,7 +16,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          branches: "!development"
+          branches: "!development, !main"
           
 #       - name: Delete merged branch 
 #         if: startsWith(github.event.pull_request.head.ref, 'feature') == true && github.event.pull_request.merged == true
