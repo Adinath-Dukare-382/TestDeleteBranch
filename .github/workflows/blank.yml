@@ -1,7 +1,9 @@
 name: MergePRs
 on:
   pull_request:
-    branches: [development]
+    branches: 
+      - main
+      - development
     types: [closed]
 jobs:
   automerge:
