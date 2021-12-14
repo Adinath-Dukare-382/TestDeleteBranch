@@ -22,3 +22,6 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           FROM_BRANCH: "main"
           TO_BRANCH: "development"
+          PULL_REQUEST_TITLE: "From main to development"
+          CONTENT_COMPARISON: true
+          
