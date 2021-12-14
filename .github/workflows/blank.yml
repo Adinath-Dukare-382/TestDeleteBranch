@@ -11,12 +11,16 @@ jobs:
     steps:
       - uses: actions/checkout@v2.4.0
       - name: Delete merged branch 
-        if: startsWith(github.event.pull_request.head.ref, 'feature') == true && startsWith(github.event.pull_request.base.ref, 'developme') == true && github.event.pull_request.merged == true
+        if: startsWith(github.event.pull_request.head.ref, 'feature') == true && github.event.pull_request.merged == true
         uses: koj-co/delete-merged-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           branches: "!development, !main"
+          
+          
+          
+          
           
 #       - name: Delete merged branch 
 #         if: startsWith(github.event.pull_request.head.ref, 'feature') == true && github.event.pull_request.merged == true
