@@ -16,7 +16,6 @@ jobs:
           branches: "!development"
         env:
           GITHUB_TOKEN: "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"
-    
 
 # jobs:
 #   build:
