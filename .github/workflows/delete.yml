@@ -3,7 +3,8 @@ on:
   pull_request:
     branches: 
       - main
-      - feature*
+      - feature_*
+      - Feature_*
     types: [closed]
 jobs:
   automerge:
@@ -11,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2.4.0
       - name: Delete merged branch 
-        if: startsWith(github.event.pull_request.head.ref, 'feature') == true || startsWith(github.event.pull_request.head.ref, 'user') == true && github.event.pull_request.merged == true
+        if: startsWith(github.event.pull_request.head.ref, 'feature_') == true || startsWith(github.event.pull_request.head.ref, 'user') == true && github.event.pull_request.merged == true
         uses: koj-co/delete-merged-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
