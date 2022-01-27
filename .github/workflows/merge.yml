@@ -2,7 +2,7 @@ name: Sync
 on:
   push:
     branches:
-      - main
+      - user/adinath/test
 
 jobs:
   sync-branches:
