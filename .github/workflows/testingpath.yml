@@ -3,4 +3,14 @@ on:
   push:
     branches:
       - user/adinath/test
-      
+
+jobs:
+  MetaDataStage:
+    runs-on: windows-2019
+    steps:
+      - name: Check out repo        
+        uses: actions/checkout@v2
+      - name: JSON
+        shell: pwsh
+        run: |
+          write-host "welcome"
