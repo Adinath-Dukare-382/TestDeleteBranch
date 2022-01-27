@@ -6,7 +6,7 @@ on:
 
 jobs:
   MetaDataStage:
-    runs-on: windows-2019
+    runs-on: label1
     steps:
       - name: Check out repo        
         uses: actions/checkout@v2
