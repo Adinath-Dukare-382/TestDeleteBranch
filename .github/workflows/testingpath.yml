@@ -1,4 +1,4 @@
-name: Sync
+name: TestingPath
 on:
   push:
     branches:
