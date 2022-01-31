@@ -20,7 +20,7 @@ jobs:
 
   call-workflow-1:
     needs: MetaDataStage
-    uses: ./.github/workflows/merge.yml
+    uses: ../.github/workflows/merge.yml
     with:
         input1: "adinath"
 
