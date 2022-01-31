@@ -26,5 +26,5 @@ jobs:
       - name: check new stage
         uses: benc-uk/workflow-dispatch@v1
         with:
-          workflow: sync-branches
+          workflow: Sync
           token: ${{ secrets.GITHUB_TOKEN }}
