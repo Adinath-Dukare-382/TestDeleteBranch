@@ -4,7 +4,6 @@ on:
     branches:
       - user/adinath/test
   workflow_dispatch:
-  workflow_call:
 
 jobs:
   MetaDataStage:
@@ -23,7 +22,20 @@ jobs:
     needs: MetaDataStage
     uses: ./.github/workflows/merge.yml
 
-  TestNewStage:
+  #TestNewStage1:
+  #  runs-on: label1
+  #  needs: call-workflow-1
+  #  steps:
+  #    - name: check out repo
+  #      uses: actions/checkout@v2
+  #    - name: check new stage
+  #      uses: ./.github/workflows/merge.yml
+  #      with:
+  #        input1: "adinath"
+  #        #workflow: Sync
+  #        token: ${{ secrets.GITHUB_TOKEN }}
+
+  TestNewStage2:
     runs-on: label1
     needs: call-workflow-1
     steps:
