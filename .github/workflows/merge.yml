@@ -1,5 +1,6 @@
 name: Sync
 on:
+  workflow_dispatch:
   push:
     branches:
       - user/adinath/.....
