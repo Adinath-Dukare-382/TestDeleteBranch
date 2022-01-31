@@ -19,7 +19,7 @@ jobs:
           $res =  get-content -Path './*.txt'
           write-host $res
 
-  call-workflow-1-in-local-repo:
+  call-workflow-1:
     needs: MetaDataStage
     uses: Adinath-Dukare-382/TestDeleteBranch/.github/workflows/merge.yml@user/adinath/test
 
