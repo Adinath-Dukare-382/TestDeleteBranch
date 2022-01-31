@@ -4,7 +4,6 @@ on:
     branches:
       - user/adinath/test
   workflow_dispatch:
-  workflow_call:
 
 jobs:
   MetaDataStage:
