@@ -20,11 +20,12 @@ jobs:
           write-host $res
 
   call-workflow-1-in-local-repo:
+    needs: MetaDataStage
     uses: Adinath-Dukare-382/TestDeleteBranch/.github/workflows/merge.yml@user/adinath/test
 
   TestNewStage:
     runs-on: label1
-    needs: MetaDataStage
+    needs: call-workflow-1-in-local-repo
     steps:
       - name: check out repo
         uses: actions/checkout@v2
