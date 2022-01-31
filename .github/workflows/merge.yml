@@ -2,6 +2,9 @@ name: Sync
 on:
   workflow_dispatch:
   workflow_call:
+    inputs:
+        input1:
+            type: string
 
   push:
     branches:
@@ -19,6 +22,7 @@ jobs:
         with:
           node-version: 12
       - run: echo "testing purpose..."
+      - run: echo ${{ inputs.input1 }}
 
       #- name: Opening pull request
       #  id: pull
