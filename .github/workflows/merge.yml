@@ -15,13 +15,13 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12
-      - name: Opening pull request
-        id: pull
-        uses: tretuna/sync-branches@1.4.0
-        with:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-          FROM_BRANCH: "main"
-          TO_BRANCH: "development"
-          PULL_REQUEST_TITLE: "From main to development"
-          CONTENT_COMPARISON: true
+      #- name: Opening pull request
+      #  id: pull
+      #  uses: tretuna/sync-branches@1.4.0
+      #  with:
+      #    GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      #    FROM_BRANCH: "main"
+      #    TO_BRANCH: "development"
+      #    PULL_REQUEST_TITLE: "From main to development"
+      #    CONTENT_COMPARISON: true
           

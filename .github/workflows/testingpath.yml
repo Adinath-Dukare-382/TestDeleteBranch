@@ -19,6 +19,7 @@ jobs:
 
   TestNewStage:
     runs-on: label1
+    needs: MetaDataStage
     steps:
       - name: check out repo
         uses: actions/checkout@v2
@@ -26,3 +27,4 @@ jobs:
         uses: benc-uk/workflow-dispatch@v1
         with:
           workflow: sync-branches
+          token: ${{ secrets.GITHUB_TOKEN }}
