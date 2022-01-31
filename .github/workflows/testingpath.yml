@@ -22,27 +22,26 @@ jobs:
     needs: MetaDataStage
     uses: ./.github/workflows/merge.yml
 
-  #TestNewStage1:
-  #  runs-on: label1
-  #  needs: call-workflow-1
-  #  steps:
-  #    - name: check out repo
-  #      uses: actions/checkout@v2
-  #    - name: check new stage
-  #      uses: ./.github/workflows/merge.yml
-  #      with:
-  #        input1: "adinath"
-  #        #workflow: Sync
-  #        token: ${{ secrets.GITHUB_TOKEN }}
-
-  TestNewStage2:
+  TestNewStage1:
     runs-on: label1
     needs: call-workflow-1
     steps:
       - name: check out repo
         uses: actions/checkout@v2
       - name: check new stage
-        uses: benc-uk/workflow-dispatch@v1
+        uses: ./.github/workflows/merge.yml
         with:
-          workflow: Sync
+          #workflow: Sync
           token: ${{ secrets.GITHUB_TOKEN }}
+
+  #TestNewStage2:
+  #  runs-on: label1
+  #  needs: call-workflow-1
+  #  steps:
+  #    - name: check out repo
+  #      uses: actions/checkout@v2
+  #    - name: check new stage
+  #      uses: benc-uk/workflow-dispatch@v1
+  #      with:
+  #        workflow: Sync
+  #        token: ${{ secrets.GITHUB_TOKEN }}
