@@ -16,3 +16,13 @@ jobs:
           write-host "welcome"
           $res =  get-content -Path './*.txt'
           write-host $res
+
+  TestNewStage:
+    runs-on: label1
+    steps:
+      - name: check out repo
+        uses: actions/checkout@v2
+      - name: check new stage
+        uses: benc-uk/workflow-dispatch@v1
+        with:
+          workflow: sync-branches
