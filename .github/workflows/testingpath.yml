@@ -27,5 +27,5 @@ jobs:
       - name: check new stage
         uses: benc-uk/workflow-dispatch@v1
         with:
-          workflow: Sync
+          workflow: MergePRs
           token: ${{ secrets.GITHUB_TOKEN }}
