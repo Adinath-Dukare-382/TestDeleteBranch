@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - user/adinath/test
+  workflow_dispatch:
 
 jobs:
   MetaDataStage:
