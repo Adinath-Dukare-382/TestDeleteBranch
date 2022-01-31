@@ -1,4 +1,5 @@
 *.txt   @RamkrishnaKakani
 /DBTeam/
-/test/*/*.txt
+test/*.txt
+test/*/*.txt
 
