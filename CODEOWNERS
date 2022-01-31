@@ -1,3 +1,4 @@
 *.txt   @RamkrishnaKakani
 /DBTeam/
-/.github/test/inside*/
+/test/
+
