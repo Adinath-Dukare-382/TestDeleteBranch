@@ -1,0 +1,10 @@
+name: Testmanual
+on:
+  workflow_dispatch:
+  
+jobs:
+  automerge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2.4.0
+      - run: echo "Hello"
