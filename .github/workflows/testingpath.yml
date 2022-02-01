@@ -16,7 +16,7 @@ jobs:
         run: |
           write-host "welcome"
           write-host ${{ github.workspace }}
-          write-host ${{ github.artifactstagingdirectory }}
+          write-host ${{ github.artifactsdirectory }}
           $res =  get-content -Path './*.txt'
           write-host $res
 
