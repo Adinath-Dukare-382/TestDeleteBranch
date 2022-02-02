@@ -1,7 +1,8 @@
 *.txt   @RamkrishnaKakani
-/DBTeam/
 test/*.txt
 test/*/*.txt
 test/*/Dataload/*.txt   @RamkrishnaKakani
+DBTeam/*/*.txt   @RamkrishnaKakani
+DBTeam/*/testfolder/
 
 
