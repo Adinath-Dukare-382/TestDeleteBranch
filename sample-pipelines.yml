@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: windows-latest
 
 steps:
 - script: echo Hello, world!
@@ -15,7 +15,7 @@ steps:
 
 - task: AzureCLI@2
   env:
-    GithubToken_ENV_VAR: $(GithubToken_ENV_VAR)
+    AzureDevops_ENV_VAR: $(AzureDevops_ENV_VAR)
   inputs:
     azureSubscription: 'svc-autoupdatevariables'
     scriptType: 'ps'
