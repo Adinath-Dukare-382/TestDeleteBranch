@@ -13,10 +13,18 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
-- task: AzurePowerShell@5
+# - task: AzurePowerShell@5
+#   inputs:
+#     azureSubscription: 'Visual Studio Professional Subscription(36e17b0a-f140-42b7-933a-03495cc621b2)'
+#     ScriptType: 'FilePath'
+#     ScriptPath: '$(Build.SourcesDirectory)/Autupdate_variableGroupValues.ps1'
+#     ScriptArguments: " 'AdinathDukare0824' '$(Build.SourcesDirectory)/Book1.csv' 'sampleproject' 'adinath' '3' "
+#     azurePowerShellVersion: 'LatestVersion'
+
+- task: AzureCLI@2
   inputs:
     azureSubscription: 'Visual Studio Professional Subscription(36e17b0a-f140-42b7-933a-03495cc621b2)'
-    ScriptType: 'FilePath'
-    ScriptPath: '$(Build.SourcesDirectory)/Autupdate_variableGroupValues.ps1'
-    ScriptArguments: " 'AdinathDukare0824' '$(Build.SourcesDirectory)/Book1.csv' 'sampleproject' 'adinath' '3' "
-    azurePowerShellVersion: 'LatestVersion'
+    scriptType: 'ps'
+    scriptLocation: 'scriptPath'
+    scriptPath: '$(Build.SourcesDirectory)/Autupdate_variableGroupValues.ps1'
+    arguments: " 'AdinathDukare0824' '$(Build.SourcesDirectory)/Book1.csv' 'sampleproject' 'adinath' '3' "
