@@ -23,3 +23,4 @@ steps:
     ScriptType: 'FilePath'
     ScriptPath: '$(Build.SourcesDirectory)/Autupdate_variableGroupValues.ps1'
     ScriptArguments: " 'AdinathDukare0824' '$(Build.SourcesDirectory)/Book1.csv' 'sampleproject' 'adinath' '3' "
+    azurePowerShellVersion: 'LatestVersion'
