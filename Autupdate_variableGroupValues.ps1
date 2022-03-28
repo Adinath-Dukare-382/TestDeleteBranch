@@ -20,7 +20,7 @@ Param(
     [string]$group_id             
 )
 $ErrorActionPreference = "Stop"  
-$env:AZURE_DEVOPS_EXT_PAT = "qqfrwwltn55qaf6rluojxnb5jizsqcalfkkfwpbtezu6n6h6qa3q"
+$env:AZURE_DEVOPS_EXT_PAT = $env:AzureDevops_ENV_VAR
     $stores = Import-csv $excelfile
 
     foreach($data in $stores)
