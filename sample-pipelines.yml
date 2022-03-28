@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  vmImage: windows-latest
+  vmImage: ubuntu-latest
 
 steps:
 - script: echo Hello, world!
@@ -24,7 +24,7 @@ steps:
 - task: AzureCLI@2
   inputs:
     azureSubscription: 'svc-autoupdatevariables'
-    scriptType: 'pscore'
+    scriptType: 'ps'
     scriptLocation: 'scriptPath'
     scriptPath: '$(Build.SourcesDirectory)/Autupdate_variableGroupValues.ps1'
     arguments: " 'AdinathDukare0824' '$(Build.SourcesDirectory)/Book1.csv' 'sampleproject' 'adinath' '3' "
