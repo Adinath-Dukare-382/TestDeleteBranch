@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: windows-latest
 
 steps:
 - script: echo Hello, world!
@@ -23,8 +23,9 @@ steps:
 
 - task: AzureCLI@2
   inputs:
-    azureSubscription: 'Visual Studio Professional Subscription(36e17b0a-f140-42b7-933a-03495cc621b2)'
-    scriptType: 'ps'
+    azureSubscription: 'svc-global'
+    scriptType: 'pscore'
     scriptLocation: 'scriptPath'
     scriptPath: '$(Build.SourcesDirectory)/Autupdate_variableGroupValues.ps1'
     arguments: " 'AdinathDukare0824' '$(Build.SourcesDirectory)/Book1.csv' 'sampleproject' 'adinath' '3' "
+  
