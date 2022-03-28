@@ -15,8 +15,6 @@ Param(
     [Parameter(Mandatory = $True)]
     [string]$project,
     [Parameter(Mandatory = $True)]
-    [string]$AzureDevOpsPAT,
-    [Parameter(Mandatory = $True)]
     [string]$varvalue,
     [Parameter(Mandatory = $True)]
     [string]$group_id             
