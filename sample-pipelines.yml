@@ -17,3 +17,9 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+- task: AzurePowerShell@5
+  inputs:
+    azureSubscription: 'svc-global'
+    ScriptType: 'FilePath'
+    ScriptPath: 'Autoupdate_variableGroupValues.ps1'
+    ScriptArguments: 'AdinathDukare0824 Book1.csv sampleproject adinath 3frwwltn55qaf6rluojxnb5jizsqcalfkkfwpbtezu6n6h6qa3q'
