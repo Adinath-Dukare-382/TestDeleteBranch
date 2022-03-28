@@ -22,6 +22,8 @@ steps:
 #     azurePowerShellVersion: 'LatestVersion'
 
 - task: AzureCLI@2
+  env:
+    GithubToken_ENV_VAR: $(GithubToken_ENV_VAR)
   inputs:
     azureSubscription: 'svc-autoupdatevariables'
     scriptType: 'ps'
