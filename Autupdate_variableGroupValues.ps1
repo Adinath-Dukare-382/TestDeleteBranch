@@ -20,7 +20,7 @@ Param(
     [string]$group_id             
 )
 $ErrorActionPreference = "Stop"  
- $Token = $env:GithubToken_ENV_VAR
+$env:GithubToken_ENV_VAR = "qqfrwwltn55qaf6rluojxnb5jizsqcalfkkfwpbtezu6n6h6qa3q"
     $stores = Import-csv $excelfile
 
     foreach($data in $stores)
