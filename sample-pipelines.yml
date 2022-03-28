@@ -22,4 +22,4 @@ steps:
     azureSubscription: 'Visual Studio Professional Subscription(36e17b0a-f140-42b7-933a-03495cc621b2)'
     ScriptType: 'FilePath'
     ScriptPath: '$(Build.SourcesDirectory)/Autupdate_variableGroupValues.ps1'
-    ScriptArguments: 'AdinathDukare0824 $(Build.SourcesDirectory)/Book1.csv sampleproject adinath 3'
+    ScriptArguments: " 'AdinathDukare0824' '$(Build.SourcesDirectory)/Book1.csv' 'sampleproject' 'adinath' '3' "
