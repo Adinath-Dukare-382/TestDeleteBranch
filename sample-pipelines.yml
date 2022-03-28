@@ -21,5 +21,5 @@ steps:
   inputs:
     azureSubscription: 'svc-global'
     ScriptType: 'FilePath'
-    ScriptPath: '$(Build.SourcesDirectory)/Autoupdate_variableGroupValues.ps1'
+    ScriptPath: '$(Build.SourcesDirectory)\Autupdate_variableGroupValues.ps1'
     ScriptArguments: 'AdinathDukare0824 $(Build.SourcesDirectory)/Book1.csv sampleproject adinath 3frwwltn55qaf6rluojxnb5jizsqcalfkkfwpbtezu6n6h6qa3q 3'
