@@ -14,7 +14,7 @@ resources:
       source: 'testingapis'
       trigger:
         branches:
-        - main
+        - development
 
 steps:
 - script: echo Hello, world!
