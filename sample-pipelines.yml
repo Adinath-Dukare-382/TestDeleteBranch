@@ -11,8 +11,8 @@ pool:
 
 resources:
   pipelines:
-    - pipeline: 'my'
-      source: 'EnvgroupExcel'
+    - pipeline: 'POC-Multirepo'
+      source: 'testingapis'
       trigger:
         branches:
         - main
