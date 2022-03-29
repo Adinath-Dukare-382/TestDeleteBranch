@@ -9,6 +9,14 @@ trigger:
 pool:
   vmImage: windows-latest
 
+resources:
+  pipelines:
+    - pipeline: MyPipeline
+      source: testingapis
+      trigger:
+        branches:
+        - main
+
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
