@@ -12,7 +12,7 @@ pool:
 resources:
   pipelines:
     - pipeline: 'my'
-      source: 'BranchDeletePOC'
+      source: 'EnvgroupExcel'
       trigger:
         branches:
         - main
