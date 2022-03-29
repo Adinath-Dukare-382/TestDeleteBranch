@@ -11,7 +11,7 @@ pool:
 
 resources:
   pipelines:
-    - pipeline: MyPipeline
+    - pipeline: testingapis
       source: testingapis
       trigger:
         branches:
