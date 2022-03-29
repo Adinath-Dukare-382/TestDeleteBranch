@@ -11,8 +11,8 @@ pool:
 
 resources:
   pipelines:
-    - pipeline: testingapis
-      source: testingapis
+    - pipeline: my
+      source: BranchDeletePOC
       trigger:
         branches:
         - main
