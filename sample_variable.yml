@@ -1,1 +1,25 @@
-aa
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger: 
+- main
+
+pool:
+  vmImage: windows-latest
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- task: AzureCLI@2
+  env:
+    AzureDevops_ENV_VAR: $(AzureDevops_ENV_VAR)
+  inputs:
+    azureSubscription: 'svc-autoupdatevariables'
+    scriptType: 'ps'
+    scriptLocation: 'scriptPath'
+    scriptPath: '$(Build.SourcesDirectory)/Autupdate_variableGroupValues.ps1'
+    arguments: " 'AdinathDukare0824' '$(Build.SourcesDirectory)/Book1.csv' 'sampleproject' 'adinath' '3' "
+  
