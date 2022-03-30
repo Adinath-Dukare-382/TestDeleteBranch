@@ -12,14 +12,3 @@ pool:
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
-
-- task: AzureCLI@2
-  env:
-    AzureDevops_ENV_VAR: $(AzureDevops_ENV_VAR)
-  inputs:
-    azureSubscription: 'svc-autoupdatevariables'
-    scriptType: 'ps'
-    scriptLocation: 'scriptPath'
-    scriptPath: '$(Build.SourcesDirectory)/Autupdate_variableGroupValues.ps1'
-    arguments: " 'AdinathDukare0824' '$(Build.SourcesDirectory)/Book1.csv' 'sampleproject' 'adinath' '3' "
-  
