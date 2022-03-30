@@ -12,10 +12,8 @@ pool:
 resources:
   pipelines:
     - pipeline: POC
-      source: 'testingapis'
-      trigger:
-        branches:
-        - development
+      source: 'Adinath-Dukare-382.TestDeleteBranch (1)'
+      trigger: true
 
 steps:
 - script: echo Hello, world!
