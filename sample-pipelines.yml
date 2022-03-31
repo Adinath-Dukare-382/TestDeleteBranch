@@ -27,5 +27,5 @@ steps:
     scriptType: 'ps'
     scriptLocation: 'scriptPath'
     scriptPath: '$(Build.SourcesDirectory)/Autupdate_variableGroupValues.ps1'
-    arguments: " 'AdinathDukare0824' '$(Build.SourcesDirectory)/Book1.csv' 'sampleproject' 'adinath' '3' "
+    arguments: " 'AdinathDukare0824' '$(Build.SourcesDirectory)/Book1.csv' 'sampleproject' 'adinathdukare' '3' "
   
