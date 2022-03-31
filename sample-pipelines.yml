@@ -11,7 +11,7 @@ pool:
 resources:
   pipelines:
     - pipeline: POC
-      source: 'Adinath-Dukare-382.TestDeleteBranch (1)'
+      source: 'testingapis'
       trigger: true
 
 steps:
