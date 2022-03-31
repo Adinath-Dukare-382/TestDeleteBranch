@@ -10,7 +10,7 @@ pool:
 
 resources:
   pipelines:
-    - pipeline: POC
+    - pipeline: POC-test
       source: 'testingapis'
       trigger: true
 
