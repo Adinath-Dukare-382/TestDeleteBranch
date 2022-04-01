@@ -42,4 +42,4 @@ steps:
     echo $(a1)
     echo $(MajorVersion)
   displayName: 'Run a multi-line script'
-  condition: and(succeeded(), eq( variables['publishToAzureFeed'], 'true' )) )
+  condition: and(succeeded(), eq( variables['publishToAzureFeed'], 'true' ))
