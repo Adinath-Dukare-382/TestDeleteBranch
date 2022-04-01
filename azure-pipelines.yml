@@ -4,7 +4,7 @@
 # https://aka.ms/yaml
 
 variables:
-- group: samplegroup
+- group: sample
 - name: MajorVersion
   value: 1
 - name: MinorVersion
@@ -36,4 +36,6 @@ steps:
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
+    write-host $BuildNumber
+    write-host $a1
   displayName: 'Run a multi-line script'
