@@ -36,6 +36,6 @@ steps:
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
-    write-host $BuildNumber
-    write-host $a1
+    echo $BuildNumber
+    echo $a1
   displayName: 'Run a multi-line script'
