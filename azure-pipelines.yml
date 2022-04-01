@@ -14,7 +14,7 @@ variables:
 - name: ReleaseVersion
   value: 22.1
 - name: BuildNumber
-  ${{ if and(ne(variables['Build.SourceBranchName'], 'main')) }}:
+  ${{ if ne(variables['Build.SourceBranchName'], 'main') }}:
      value: 1
   ${{ if and(eq(variables['Build.SourceBranchName'], 'main'), ne(variables['Build.Reason'], 'PullRequest')) }}:
      value: $[counter(format('{0}.{1}.{2}.{3}',variables['MajorVersion'],variables['MinorVersion'],variables['BuildNumber'],variables['Build.SourceBranchName']), 1)]
