@@ -39,7 +39,7 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
     echo $(BuildNumber)
-    echo $(POH-BS-Dev)
+    echo $(a1)
     echo $(MajorVersion)
   displayName: 'Run a multi-line script'
   condition: and(succeeded(), eq( variables['publishToAzureFeed'], 'true' )) )
