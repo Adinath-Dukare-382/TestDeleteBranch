@@ -1,0 +1,39 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+variables:
+- group: samplegroup
+- name: MajorVersion
+  value: 1
+- name: MinorVersion
+  value: 0
+- name: PatchNumber
+  value: 0
+- name: ReleaseVersion
+  value: 22.1
+- name: BuildNumber
+  ${{ if notin(variables['Build.SourceBranchName'], 'main', 'development', 'release-') }}:
+     value: 1
+  ${{ if and(eq(variables['Build.SourceBranchName'], 'main'), ne(variables['Build.Reason'], 'PullRequest')) }}:
+     value: $[counter(format('{0}.{1}.{2}.{3}',variables['MajorVersion'],variables['MinorVersion'],variables['BuildNumber'],variables['Build.SourceBranchName']), 1)]
+  ${{ if and(eq(variables['Build.SourceBranchName'], 'development'), ne(variables['Build.Reason'], 'PullRequest')) }}:
+     value: $[counter(format('{0}.{1}.{2}.{3}',variables['MajorVersion'],variables['MinorVersion'],variables['BuildNumber'],variables['Build.SourceBranchName']), 219)]
+  ${{ if and(contains(variables['Build.SourceBranchName'], 'release-'), ne(variables['Build.Reason'], 'PullRequest')) }}:
+     value: $[counter(format('{0}.{1}.{2}.{3}',variables['MajorVersion'],variables['MinorVersion'],variables['BuildNumber'],variables['Build.SourceBranchName']), 1)]
+ 
+
+trigger: none
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
