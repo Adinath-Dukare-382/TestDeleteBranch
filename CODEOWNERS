@@ -1,6 +1,6 @@
-*.txt   @RamkrishnaKakani
-/DBTeam/
-test/*.txt
-test/*/*.txt
-test/*/Dataload/*.txt   @RamkrishnaKakani
+#*.txt   @RamkrishnaKakani
+#/DBTeam/
+#test/*.txt
+#test/*/*.txt
+#test/*/Dataload/*.txt   @RamkrishnaKakani
 
